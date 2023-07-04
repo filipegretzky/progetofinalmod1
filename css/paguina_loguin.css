@@ -1,0 +1,52 @@
+body {
+    font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Sora', sans-serif;
+}
+.comteudo {
+    width: 422px;
+    height: 447px;
+    
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    -webkit-box-shadow: 7px 3px 25px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 3px 25px -8px rgba(0,0,0,0.75);
+box-shadow: 7px 3px 25px -8px rgba(0,0,0,0.75);
+}
+.span{
+    margin-top: 23px;
+}
+h1 {
+    margin-top: 5px;
+}
+.input {
+    width: 415px;
+    height: 26px;
+    border-radius: 7px;
+}
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    margin-bottom: 43px;
+}
+.lebel {
+    margin-top: 19px;
+    
+    font-size: 20px;
+}
+button {
+    width: 415px;
+    height: 47px;
+    font-size: 20px;
+    color: white;
+  margin-top: 15px;
+  background-color: rgba(72, 45, 131, 1);
+  border-radius: 12px;
+}
+a {
+    color: rgb(164, 161, 161);
+}
