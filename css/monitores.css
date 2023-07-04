@@ -23,3 +23,32 @@
     height: 533px;
     background-color: brown;
 }
+h2 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 33px;
+    color: #fbb04d;  
+    margin-left: 11px;                                       
+}
+strong {
+    color: white;
+}
+.item-menu {
+    width: 190px;
+    height: 60px;
+  
+   margin: 2px;
+   margin-left: 12px;
+   margin-bottom: 7px;
+   border-radius: 14px;
+   display: flex;
+   align-items: center;
+}
+.icones {
+    font-size: 40px;
+    color: white;
+}
+.nome-icones {
+    margin-left: 14px;
+    font-size: 24px;
+    color: white;
+}
