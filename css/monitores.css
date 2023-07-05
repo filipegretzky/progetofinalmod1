@@ -6,8 +6,8 @@ body {
 }
 .menu {
     position: relative;
-    width: 217px;
-    height: 700px;
+    width: 226px;
+    height: 700px; 
     background-color: blueviolet;
 }
 .conteudo {
@@ -160,7 +160,7 @@ h1{
   .açao{
     width: 114px;
     height: 40px;
-   
+   display: flex;
 
   }
   .nome {
@@ -169,17 +169,21 @@ h1{
   p{
    color: white;
   }
- /* .conteudo-descriçaoapi {
+  .conteudo-descriçaoapi {
     display: flex;
     width:1110px;
     height: 40px;
-    margin-left: 9px;
+    margin-top: 4px;
     border-radius: 7px;
-  }*/
+   
+  }
   .conteudoparaapi {
     width: 1110px;
     margin-left: 9px;
     border-radius: 7px;
-    background-color: chartreuse;
+    
     height: 470px;
+  }
+  .pdaapi {
+    color: black;
   }
