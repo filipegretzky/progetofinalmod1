@@ -141,10 +141,11 @@ h1{
 .conteudo-descriçao {
     display: flex;
     width:1110px;
-    height: 40px;
+    height: 44px;
     background-color: blueviolet;
-    margin-left: 9px;
+    margin-left: 4px;
     border-radius: 7px;
+    
 }
 
   .imfo-nome{
@@ -152,38 +153,34 @@ h1{
   height: 40px;
   
   }
-  .info-email{
-  width: 554px;
-  height: 40px;
+  .email{
  
+    text-align: inherit;
   }
   .açao{
-    width: 114px;
-    height: 40px;
-   display: flex;
-
+    width: 172px;
+    text-align: inherit;
   }
+  
   .nome {
-    margin-left: 5px;
+    text-align: inherit;
+    width: 421px;
   }
   p{
    color: white;
   }
-  .conteudo-descriçaoapi {
-    display: flex;
-    width:1110px;
-    height: 40px;
-    margin-top: 4px;
-    border-radius: 7px;
+ 
+  table {
+    width: 100%;
+    border: none;
+    color: white;
+    margin-left: 4px;
+  }
+  thead{
+    height: 45px;
+  }
+  tbody {
+    color: black;
    
   }
-  .conteudoparaapi {
-    width: 1110px;
-    margin-left: 9px;
-    border-radius: 7px;
-    
-    height: 470px;
-  }
-  .pdaapi {
-    color: black;
-  }
+ 

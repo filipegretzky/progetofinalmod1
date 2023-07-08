@@ -1,20 +1,23 @@
 const mentoria = ()=> {
-    window.location = 'mentorias.html'
+    window.location = '../mentorias/mentorias.html'
 }
 const redementores = (mentores) => {
-    const conteiner = document.getElementById('cont-api')
+    const tabela = document.querySelector('tbody')
+     tabela.innerHTML = '' //esvaziando o elemento
 
     mentores.forEach(mentores => {
-        conteiner.innerHTML = conteiner.innerHTML + `
-        <div class="conteudo-descriçaoapi">
-        <div class="imfo-nome"><p class="pdaapi">${mentores.nome}</p></div>
-        <div class="info-email"><p class="pdaapi">${mentores.email}</p></div>
-        <div class="açao"><div><button onclick="editarmentores(${mentores.id})">🖊</button></div>
-        <div><button onclick="deletementor(${mentores.id})">🗑</button></div>
-        </div>
+        const mentorhtml =  `
+        <tr>
+        <td class="nome">${mentores.nome}</td>
+        <td class="email">${mentores.email}</td>
+        <td class="açao">
+        <button onclick="editarmentores(${mentores.id})">🖊</button>
+        <button onclick="deletementor(${mentores.id})">🗑</button>
+        </td>
+        </tr>
         
-        </div>
         `
+        tabela.innerHTML = tabela.innerHTML + mentorhtml
     })
 }
 const getmentores = async () => {

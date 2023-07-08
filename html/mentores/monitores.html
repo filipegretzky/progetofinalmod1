@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&family=Sora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+                
+    <title>mentores</title>
+    <link rel="stylesheet" href="../../css/mentores/monitores.css">
+    <script src="../../js/mentores/monitores.js" defer></script>
+  </head>
+    <body>
+
+  <div class="geral">
+    <div class="menu">
+
+       <h2>mentor<strong>class</strong></h2>
+
+    <div class="item-menu" ><button  class="item-menu"><span  class="material-symbols-outlined icones">
+                   person
+        </span><span class="nome-icones">Mentores</span></button>
+    </div>
+
+      <div class="item-menu"><button  class="item-menu" onclick="mentoria()"><span class="material-symbols-outlined icones">
+            edit_document
+          </span><span class="nome-icones">Mentorias</span></button>
+      </div>
+
+      <div class="item-menu"><button  class="item-menu"><span class="material-symbols-outlined icones">
+                  subscriptions
+          </span><span class="nome-icones">turmas</span></button>
+      </div>
+
+      <div class="item-menu"><button  class="item-menu"><span class="material-symbols-outlined icones">
+                 groups
+          </span> <span class="nome-icones">Alunos</span></button>
+      </div>
+
+    </div>
+      <div class="conteudo">
+          <div class="topo">
+              <div class="perfil"><span class="material-symbols-outlined perf">
+                person
+                 </span></div><div class="nome-email"><h3>Filipe moura</h3><h5>filipemouradonascimento03@gmail.com</h5></div>
+            </div>
+          <h1>mentores</h1>
+
+        <div class="dados-gerais">
+            <div class="idbusca">
+
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="pesquise uma palavra chave"/>
+                <img src="../../img/lupa.pnj.png" id="btnBusca" alt="Buscar"/>
+             </div>
+                  
+            <div class="buton-adicionar">
+                <button id="adicionar-mentores" onclick="novomentor()"><strong>+ Novo Mentor</strong></button>
+          </div>
+      </div>
+        <div class="conteudo-descriçao">
+
+       <table>
+        
+        <thead>
+          <th class="nome">nome</th>
+          <th class="email">email</th>
+          <th class="açao">açao</th>
+        </thead>
+      
+       </div>
+
+        <tbody></tbody>
+      </table>
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>

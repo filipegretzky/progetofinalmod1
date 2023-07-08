@@ -1,0 +1,156 @@
+body {
+    font-family: 'Sora', sans-serif;
+}
+.geral {
+    display: flex;
+}
+.menu {
+    position: relative;
+    width: 226px;
+    height: 700px; 
+    background-color: blueviolet;
+}
+.conteudo {
+    width: 1119px;
+    height: 700px;
+   
+}
+.topo{
+    width:1119px;
+   
+    height: 87px;
+    display: flex;
+    justify-content: right;
+    
+
+}
+.dados-gerais {
+    width: 1119px;
+    height: 533px;
+    
+}
+h2 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 33px;
+    color: #fbb04d;  
+    margin-left: 11px;                                       
+}
+strong {
+    color: white;
+}
+.item-menu {
+    width: 190px;
+    height: 60px;
+  
+   margin: 2px;
+   margin-left: 6px;
+   margin-bottom: 7px;
+   border-radius: 14px;
+   display: flex;
+   align-items: center;
+   background-color: blueviolet;
+   border: none;
+
+}
+.icones {
+    font-size: 40px;
+    color: white;
+}
+.nome-icones {
+    margin-left: 14px;
+    font-size: 24px;
+    color: white;
+}.perfil{
+  display: flex;
+    background-color:blueviolet ;
+   align-items: center;
+   justify-content: center;
+    text-align: center;
+    height: 52px;
+    width: 52px;
+    border-radius: 100%;
+    margin-top: 14px;
+}
+.perf {
+    
+font-size: 39px;
+}
+.nome-email{
+    margin-right: 19px;
+    margin-left: 17px;
+}
+h3{
+    margin-bottom: 1px;
+    font-size: 19px;
+    margin-left: 36px;
+    margin-top: 19px;
+    }
+    h5{
+     margin-top: 3px;
+     color: rgb(96, 95, 95);
+     font-size: 10px;
+    }
+    h1{
+        margin-left: 10px;
+        margin-top: 1px;
+        margin-bottom: 7px;
+    }
+    .idbusca {
+        width:1119px;
+       
+        height: 57px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #divBusca{
+        
+        border:solid 1px;
+        border-radius:11px;
+        width:318px;
+        height: 32px;
+        margin-top: 11px;
+        margin-left: 11px;
+      }
+      
+      #txtBusca{
+        float:left;
+        background-color:transparent;
+        padding-left:5px;
+        font-style:italic;
+        font-size:18px;
+        border:none;
+        height:32px;
+        width:286px;
+      }
+      #btnBusca {
+        width: 20px;
+        height: 20px;
+        margin-top: 6px;
+      }
+      #adicionar-mentores {
+        width: 186px;
+        height: 49px;
+        background-color: rgb(33, 150, 33);
+        font-size: 13px;
+        color: white;
+        border-radius: 13px;
+        border: none;
+        margin-right: 14px;
+        margin-top: 4px;
+    }
+    .conteudo-descriçao {
+        display: flex;
+        width:1110px;
+        height: 44px;
+        background-color: blueviolet;
+        margin-left: 4px;
+        border-radius: 7px;
+    }
+    table {
+        width: 100%;
+        text-align: justify;
+        
+    }
+    thead {
+        color: white;
+    }
