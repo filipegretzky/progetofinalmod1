@@ -26,17 +26,30 @@ const formulario = document.getElementById('formulario')
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault()
 
+    //checkbox.addEventListener('change', function() {
+      var resultado = checkbox.checked ? 'válido' : 'inválido';
+    
+      // Objeto com os dados a serem enviados para a API
+      var dados = {
+        resultado: resultado
+      };
+      console.log('o resultado e',resultado )
+    //})
+     
+
+
     const turma = formulario.elements['nome'].value
     const mentor = formulario.elements['mentor'].value
-
+   
     const mentorobjd = await buscarmentor(mentor)
     const mentorias ={
         turma,
         mentor: {
           id: mentorobjd.id ,
           nome :  mentorobjd.nome
-          
-        }
+         
+        },
+        resultado
     }
     cadastrarmentoria(mentorias)
 })
@@ -52,4 +65,20 @@ const cadastrarmentoria = async (mentorias) => {
     })
     window.location= 'mentorias.html'
 }   
+var checkbox = document.getElementById('checkbox');
+    var labelValido = document.getElementById('label-valido');
+    var labelInvalido = document.getElementById('label-invalido');
+    
+    checkbox.addEventListener('change',async function() {
+      if (checkbox.checked) {
+        labelValido.style.display = 'inline-block';
+        labelInvalido.style.display = 'none';
+         
+      } else {
+        labelValido.style.display = 'none';
+        labelInvalido.style.display = 'inline-block';
+        
+      }
+    });
    
+    

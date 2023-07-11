@@ -41,6 +41,16 @@ const buscarmentor = async (id) => {
     e.preventDefault()
     const turma = formulario.elements['nome'].value 
     const mentor = formulario.elements['mentor'].value 
+  //checkbox.addEventListener('change', function() {
+    var resultado = checkbox.checked ? 'válido' : 'inválido';
+    
+    // Objeto com os dados a serem enviados para a API
+    var dados = {
+      resultado: resultado
+    };
+    console.log('o resultado e',resultado )
+  //})
+
 
     const mentorobjd = await buscarmentor(mentor)
     const mentorias ={
@@ -50,6 +60,7 @@ const buscarmentor = async (id) => {
           nome :  mentorobjd.nome
           
         },
+        resultado
     }
     editarmentorias(mentorias)
   })
@@ -78,3 +89,19 @@ const buscarmentor = async (id) => {
     carregardadosdoformulario(mentorias)
   }
   carregardados()
+
+  var checkbox = document.getElementById('checkbox');
+    var labelValido = document.getElementById('label-valido');
+    var labelInvalido = document.getElementById('label-invalido');
+    
+    checkbox.addEventListener('change',async function() {
+      if (checkbox.checked) {
+        labelValido.style.display = 'inline-block';
+        labelInvalido.style.display = 'none';
+         
+      } else {
+        labelValido.style.display = 'none';
+        labelInvalido.style.display = 'inline-block';
+        
+      }
+    });

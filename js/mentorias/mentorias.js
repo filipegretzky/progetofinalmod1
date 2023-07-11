@@ -11,11 +11,11 @@ const redementorias = (mentoria) => {
         <td class="nome">${mentorias.turma}</td>
         <td class="mentor">${mentorias.mentor.nome}</td>
 
-        <td class="status"></td>
+        <td class="status">${mentorias.resultado}</td>
         
         <td class="açao">
         <button onclick="editarmentorias(${mentorias.id})">🖊</button>
-        <button onclick="deletementoria(${mentorias.id})">🗑</button>
+        <button onclick="deletementotia (${mentorias.id})">🗑</button>
         </td>
         </tr>
         

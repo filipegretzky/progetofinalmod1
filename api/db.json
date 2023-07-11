@@ -19,11 +19,9 @@
   "mentorias": [
     {
       "turma": "Gerenciamento de estados globais no ReactJS com Typescript",
-      "mentor": {
-        "id": 1,
-        "nome": "julia amaral"
-      },
-      "id": 1
+      "mentor": {},
+      "resultado": "válido",
+      "id": 3
     },
     {
       "turma": "Gerenciamento de estados globais no ReactJS com Typescript",
@@ -31,9 +29,19 @@
         "id": 3,
         "nome": "Paola Oliveira"
       },
-      "id": 2
+      "resultado": "inválido",
+      "id": 4
+    },
+    {
+      "turma": "Gerenciamento de estados globais no ReactJS com Typescript",
+      "mentor": {
+        "id": 2,
+        "nome": "Carlos Eduardo"
+      },
+      "resultado": "válido",
+      "id": 5
     }
   ],
-  "turmas":[],
-  "alunos":[]
+  "turmas": [],
+  "alunos": []
 }
