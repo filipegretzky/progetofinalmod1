@@ -26,15 +26,15 @@ const formulario = document.getElementById('formulario')
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    //checkbox.addEventListener('change', function() {
+   
       var resultado = checkbox.checked ? 'válido' : 'inválido';
     
-      // Objeto com os dados a serem enviados para a API
+      
       var dados = {
         resultado: resultado
       };
       console.log('o resultado e',resultado )
-    //})
+  
      
 
 

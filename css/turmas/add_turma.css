@@ -134,6 +134,7 @@ hr {
 input {
     width: 167px;
     border-radius: 10px;
+    padding-left: 25px;
   }
 
 .cont {
@@ -142,4 +143,7 @@ input {
 }
 #data_inicio {
     width: 170px;
+  }
+  .mento {
+    margin-right: 253px;
   }
