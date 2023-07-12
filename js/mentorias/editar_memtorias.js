@@ -48,7 +48,7 @@ const buscarmentor = async (id) => {
     var dados = {
       resultado: resultado
     };
-    console.log('o resultado e',resultado )
+    
   //})
 
 

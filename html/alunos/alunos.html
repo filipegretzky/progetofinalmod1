@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>turmas</title>
+        <title>Alunos</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&family=Sora&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-
-        <link rel="stylesheet" href="../../css/turmas/turmas.css">
-        <script src="../../js/turmas/turmas.js" defer></script>
+        <link rel="stylesheet" href="../../css/alunos/alunos.css">
+        <script src="../../js/alunos/alunos.js" defer></script>
     </head>
     <body>
         <div class="geral">
@@ -39,7 +38,7 @@
                 </span></div><div class="nome-email"><h3>Filipe moura</h3><h5>filipemouradonascimento03@gmail.com</h5></div>
             </div>
          
-         <h1>Turmas</h1>
+         <h1>alunos</h1>
          <div class="dados-gerais">
             <div class="idbusca">
              <div id="divBusca">
@@ -48,26 +47,24 @@
              </div>
                
                <div class="buton-adicionar">
-                 <button id="adicionar-mentores" onclick="novaturma()"><strong> + nova turma</strong></button>
+                 <button id="adicionar-mentores" onclick="novoaluno()"><strong>+ Novo aluno</strong></button>
                </div>
-               </div>
-               <div class="conteudo-descriçao">
-                <table>
-                  <thead>
-                    <th class="turma" >turma</th>
-                    <th class="mentor">mentor</th>
-                    <th class="mentoria">mentoria</th>
-                    <th class="data_de_inicio">data de inicio</th>
-                    <th class="dia_da_semana">dia da semaana</th>
-                    <th class="horario">horario</th>
-                    <th class="encontros">encontros</th>
-                    <th class="açao">açao</th>
-                  </thead>
-                </div>
-                  <tbody></tbody>
-                </table>
+               
                
             </div>
-        </div>    
+            
+            <div class="conteudo-descriçao">
+                <table>
+               <thead>
+                <th class="nome">nome</th>
+                <th class="email">email</th>
+                <th class="açao">açao</th>
+               </thead>
+                </div>
+                <tbody></tbody>
+            </table>
+
+            </div>
+
     </body>
 </html>

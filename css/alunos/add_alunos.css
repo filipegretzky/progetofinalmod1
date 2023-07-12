@@ -6,7 +6,7 @@ body {
 }
 .menu {
     position: relative;
-    width: 250px;
+    width: 217px;
     height: 700px;
     background-color: rgba(72, 45, 131, 1);
 }
@@ -104,7 +104,7 @@ strong {
 }
   .conteudo-adicionar {
     width: 1102px;
-    height: 537px;
+    height: 309px;
    
     margin-left: 10px;
     border-radius: 21px;
@@ -114,38 +114,25 @@ strong {
 -moz-box-shadow: 2px -2px 6px 0px rgba(115,100,115,1);
 box-shadow: 2px -2px 6px 0px rgba(115,100,115,1);
   }
-
-h4 {
-  margin-left: 40px;
-  font-size: 25px;
-  margin-top: 40px;
-}
-hr {
-  margin-left: 40px;
-  margin-right: 40px;
-  height: 5px;
-  background-color: #7c7777;
-  border-radius: 19px;
-  margin-top: 23px;
-}
-.for {
-  margin-left: 29px;
-}
-input {
-    width: 167px;
+  h4 {
+    margin-left: 40px;
+    font-size: 25px;
+    margin-top: 40px;
+  }
+  hr {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 5px;
+    background-color: #7c7777;
+    border-radius: 19px;
+    margin-top: 23px;
+  }
+  .for {
+    margin-left: 29px;
+  }
+  input {
+    width: 300px;
     border-radius: 10px;
-    padding-left: 25px;
-  }
-
-.cont {
-    margin-left: 20px;
-    margin-bottom: 25px;
-}
-#data_inicio {
-    width: 170px;
-  }
-  .mento {
-    margin-right: 253px;
   }
   #salva {
     background-color: rgba(72, 45, 131, 1);

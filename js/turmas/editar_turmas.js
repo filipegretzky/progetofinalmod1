@@ -49,15 +49,29 @@ const buscarmentor = async (id) => {
     })
   }
   carregarselectmentoria()
- 
+
   const formulario = document.getElementById('formulario')
 
-  formulario.addEventListener('submit',  async (e)=> {
-    e.preventDefault()
-     
-    //const mentoria = formulario.elements['mentoria'].value
+   turmasid = null
 
-    const mentoria = formulario.elements['mentoria'].value
+  const getidurl = () => {
+    const paramString = window.location.search
+    const pararms = new URLSearchParams(paramString)
+   
+    turmasid = pararms.get('id')
+  }
+
+  const buscarturma = async () => {
+    const response = await fetch(`http://localhost:3000/turmas/${turmasid}`)
+    const turma = await response.json()
+    return turma
+  }
+
+  
+  formulario.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+const mentoria = formulario.elements['mentoria'].value
     const mentor = formulario.elements['mentorselect'].value
     const data_inicio = formulario.elements['data_inicio'].value
     const dia = formulario.elements['dia'].value
@@ -66,7 +80,7 @@ const buscarmentor = async (id) => {
     const turma = formulario.elements['turma'].value
     const qd_encontros = formulario.elements['qd_encontros'].value
 
-  const mentoriaobj = await buscarmentoria(mentoria)
+    const mentoriaobj = await buscarmentoria(mentoria)
 
    const mentorobj = await buscarmentor (mentor)
 
@@ -88,17 +102,40 @@ const buscarmentor = async (id) => {
         qd_encontros
 
    }
-  cadastraturma(turmas)
+  editarturmas(turmas)
   })
 
-  const cadastraturma = async (turmas) => {
-    await fetch (`http://localhost:3000/turmas` ,{
-      method: 'POST',
-      headers: {
-        "Accept": 'application/json, text/plain, */*',
-        "Content-Type": 'application/json'
-      },
-      body: JSON.stringify(turmas)
+  const carregardadosdoformulario = async (turmas) => {
+    document.getElementById('select').value = turmas.mentorial
+    document.getElementById('mentor').value = turmas.mentor
+    document.getElementById('data_inicio').value = turmas.data_inicio
+    document.getElementById('dia').value = turmas.dia
+    document.getElementById('hora_inicio').value = turmas.hora_inicio
+    document.getElementById('hora_termino').value = turmas.hora_termino
+    document.getElementById('turma').value = turmas.turma
+    
+    document.getElementById('qd_encontros').value = turmas. qd_encontros
+    
+
+ }
+
+ const editarturmas = async (turmas) => {
+    await fetch(`http://localhost:3000/turmas/${turmasid}`, {
+        method: 'PUT',
+        headers: {
+          "Accept": 'application/json, text/plain, */*',
+          "Content-Type": 'application/json'
+        },
+        body: JSON.stringify(turmas)
     })
-    window.location= 'turmas.html'
-  }
+    window.location = 'turmas.html'
+ }
+
+ const carregardados = async () => {
+    getidurl()
+
+    const turmas = await buscarturma(turma)
+
+    carregardadosdoformulario(turmas)
+ }
+ carregardados()

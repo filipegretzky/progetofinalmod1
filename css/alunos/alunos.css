@@ -155,31 +155,14 @@ h3{
         color: white;
         height: 45px;
     }
-    .turma {
-        width: 59px;
-        font-size: 14px;
+    .nome {
+        width: 300px;
     }
-    .mentor {
-        width: 121px;
-        font-size: 14px;
+    .email {
+        width: 400px;
+
     }
-    .mentoria {
-        width: 450pxpx;
-        font-size: 13px;
+    .açao {
+        width: 100px;
     }
-    .dia_da_semana{
-        width: 125px;
-        font-size: 14px;
-    }
-    .data_de_inicio {
-        width: 104px;
-        font-size: 14px;
-    }
-    .encontros {
-        width: 89px;
-        font-size: 14px;
-    }
-        .horario {
-            font-size: 14px;
-            width: 82px;
-        }
+    

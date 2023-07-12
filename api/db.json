@@ -42,6 +42,35 @@
       "id": 5
     }
   ],
-  "turmas": [],
-  "alunos": []
+  "turmas": [
+    {
+      "mentorial": {
+        "id": 3,
+        "nome": "Gerenciamento de estados globais no ReactJS com Typescript"
+      },
+      "mentor": {
+        "id": 2,
+        "nome": "Carlos Eduardo",
+        "email": "carlos@yahoo.com"
+      },
+      "data_inicio": "2023-07-15",
+      "dia": "quarta-feira",
+      "hora_inicio": "14:00h",
+      "hora_termino": "16:00h",
+      "turma": "turma1",
+      "qd_encontros": "5",
+      "id": 2
+    }
+  ],
+  "alunos": [
+    {
+      "nome": "filipe",
+      "email": "filipemouradonascimento03@gmail.com",
+      "turma": {
+        "id": 2,
+        "turma": "turma1"
+      },
+      "id": 1
+    }
+  ]
 }
