@@ -26,3 +26,4 @@ const cadastramentor = async (mentores) => {
     })
     window.location= 'monitores.html'
 }
+

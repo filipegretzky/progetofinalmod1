@@ -1,3 +1,16 @@
+const mentoria = ()=> {
+    window.location = '../mentorias/mentorias.html'
+}
+const turmas = ()=> {
+    window.location = 'turmas.html'
+}
+const alunos = () => {
+    window.location = '../alunos/alunos.html'
+}
+const mentores = () => {
+    window.location = '../mentores/monitores.html'
+}
+
 const redeturmas = (turmas) => {
  const tabela = document.querySelector('tbody')
  tabela.innerHTML = ''
@@ -13,8 +26,8 @@ const redeturmas = (turmas) => {
     <td class="horario">${turmas.hora_inicio}</th>
     <td class="encontros">0/${turmas.qd_encontros}</td>
     <td class="açao">
-        <button onclick="editarturmas(${turmas.id})">🖊</button>
-        <button onclick="deleteturma (${turmas.id})">🗑</button>
+        <button onclick="editarturmas(${turmas.id})" id="editarbut">🖊</button>
+        <button onclick="deleteturma (${turmas.id})" id="deletbut">🗑</button>
         </td>
    </tr>
     `

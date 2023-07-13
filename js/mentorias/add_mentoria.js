@@ -80,5 +80,7 @@ var checkbox = document.getElementById('checkbox');
         
       }
     });
-   
+    const voltar = () => {
+      window.location = 'mentorias.html'
+  }
     

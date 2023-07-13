@@ -1,6 +1,15 @@
 const mentoria = ()=> {
     window.location = '../mentorias/mentorias.html'
 }
+const turmas = ()=> {
+    window.location = '../turmas/turmas.html'
+}
+const alunos = () => {
+    window.location = '../alunos/alunos.html'
+}
+const mentores = () => {
+    window.location = 'monitores.html'
+}
 const redementores = (mentores) => {
     const tabela = document.querySelector('tbody')
      tabela.innerHTML = '' //esvaziando o elemento
@@ -11,8 +20,8 @@ const redementores = (mentores) => {
         <td class="nome">${mentores.nome}</td>
         <td class="email">${mentores.email}</td>
         <td class="açao">
-        <button onclick="editarmentores(${mentores.id})">🖊</button>
-        <button onclick="deletementor(${mentores.id})">🗑</button>
+        <button onclick="editarmentores(${mentores.id})" id="editarbut" >🖊</button>
+        <button onclick="deletementor(${mentores.id})" id="deletbut" >🗑</button>
         </td>
         </tr>
         

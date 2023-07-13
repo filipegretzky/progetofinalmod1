@@ -102,3 +102,6 @@ const buscarmentor = async (id) => {
     })
     window.location= 'turmas.html'
   }
+  const voltar = () => {
+    window.location = 'turmas.html'
+}

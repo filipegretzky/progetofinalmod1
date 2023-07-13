@@ -139,3 +139,6 @@ const mentoria = formulario.elements['mentoria'].value
     carregardadosdoformulario(turmas)
  }
  carregardados()
+  const voltar = () => {
+    window.location = 'turmas.html'
+}

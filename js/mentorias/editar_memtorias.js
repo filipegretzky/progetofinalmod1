@@ -105,3 +105,6 @@ const buscarmentor = async (id) => {
         
       }
     });
+    const voltar = () => {
+      window.location = 'mentorias.html'
+  }

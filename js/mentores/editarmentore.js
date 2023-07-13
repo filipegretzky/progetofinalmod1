@@ -47,4 +47,6 @@ const carregardadosdoformulario = async (mentor) => {
     carregardadosdoformulario(mentor)
  }
  carregardados()
- 
+ const voltar = () => {
+    window.location = 'monitores.html'
+}

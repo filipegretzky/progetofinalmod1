@@ -8,7 +8,7 @@ body {
     position: relative;
     width: 226px;
     height: 700px; 
-    background-color: blueviolet;
+    background-color: rgba(72, 45, 131, 1);
 }
 .conteudo {
     width: 1119px;
@@ -48,7 +48,7 @@ strong {
    border-radius: 14px;
    display: flex;
    align-items: center;
-   background-color: blueviolet;
+   background-color: rgba(72, 45, 131, 1);
    border: none;
 
 }
@@ -62,7 +62,7 @@ strong {
     color: white;
 }.perfil{
   display: flex;
-    background-color:blueviolet ;
+    background-color:rgba(72, 45, 131, 1);
    align-items: center;
    justify-content: center;
     text-align: center;
@@ -142,7 +142,7 @@ h3{
         display: flex;
         width:1110px;
         height: 44px;
-        background-color: blueviolet;
+        background-color: rgba(72, 45, 131, 1);
         margin-left: 4px;
         border-radius: 7px;
     }
@@ -161,6 +161,27 @@ h3{
     .mentor {
         width: 230px;
     }
-    .status {
+    /*.status {
         width: 196px;
-    }
+    }*/
+    #deletbut {
+        color: red;
+        border: none;
+        border-radius: 9px;
+        background: white;
+        font-size: 18px;
+      }
+      #editarbut {
+        color: #0217af;
+        border: none;
+        border-radius: 9px;
+        background: white;
+        font-size: 18px;
+      }
+      #butp {
+        background: #8d6eab;
+      }    
+      .valido {
+        background-color: green;
+        width: 196px;
+      }
