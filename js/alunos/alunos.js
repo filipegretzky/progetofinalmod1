@@ -1,3 +1,4 @@
+const inputpesquisa = document.getElementById('txtBusca')
 const novoaluno = () => {
     window.location = 'add_aluno.html'
 }
@@ -33,8 +34,14 @@ const redalunos = (alunos) => {
         tabela.innerHTML = tabela.innerHTML + alunoshtml
     });
 }
-const getalunos = async () => {
-   const  respons = await fetch(`http://localhost:3000/alunos`)
+const getalunos = async (pesquisa = null) => {
+    let texto = ''
+
+    if(pesquisa) {
+       texto =`?q=${pesquisa}`
+    }
+
+   const  respons = await fetch(`http://localhost:3000/alunos${texto}`)
    const alunos = await respons.json()
 
    redalunos(alunos)
@@ -49,3 +56,15 @@ const deletealuno = async (id) => {
 const editaraluno = (id) => {
     window.location = `editar_aluno.html?id=${id}`
 }
+inputpesquisa.addEventListener('keyup',(e) => {
+    const texto = inputpesquisa.value 
+
+    if (texto === '') {
+        getalunos()
+    }
+
+    else if(e.key === 'Enter') {
+                      
+        getalunos(texto)
+    }
+})

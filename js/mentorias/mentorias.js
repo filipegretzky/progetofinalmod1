@@ -1,3 +1,4 @@
+const inputpesquisa = document.getElementById('txtBusca')
 const nova_mentoria = () => {
     window.location = 'add_mentoria.html'
 }
@@ -15,7 +16,7 @@ const mentores = () => {
 }
 const redementorias = (mentoria) => {
     const tabela = document.querySelector('tbody')
-     tabela.innerHTML = '' //esvaziando o elemento
+     tabela.innerHTML = '' 
      
 
     mentoria.forEach(mentorias => {
@@ -39,8 +40,15 @@ const redementorias = (mentoria) => {
     })
   
 }
-const getmentorias = async () => {
-    const respons = await fetch("http://localhost:3000/mentorias")
+const getmentorias = async (pesquisa = null) => {
+    let texto = ''
+
+    if(pesquisa) {
+       texto =`?q=${pesquisa}`
+    }
+   
+
+    const respons = await fetch(`http://localhost:3000/mentorias${texto} `)
     const mentoria = await respons.json()
 
     redementorias(mentoria)
@@ -57,6 +65,15 @@ getmentorias()
 const editarmentorias = async (id) => {
     window.location = `editar_mentorias.html?id=${id}`
 }
-const addclass = async () => {
 
-}
+inputpesquisa.addEventListener('keyup',(e) => {
+    const texto = inputpesquisa.value
+    if(texto === ''){
+        getmentorias()
+    }
+
+    else if(e.key === 'Enter') {
+                         
+        getmentorias(texto)
+    }
+})

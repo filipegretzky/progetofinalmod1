@@ -200,17 +200,17 @@ box-shadow: 2px -2px 6px 0px rgba(115,100,115,1);
     border-radius: 50%;
   }
 
-  .label-valido,
-  .label-invalido {
+  .label-ativo,
+  .label-inativo {
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
   }
 
-  .label-valido {
+  .label-ativo {
     color: green;
   }
 
-  .label-invalido {
+  .label-inativo {
     color: red;
   }

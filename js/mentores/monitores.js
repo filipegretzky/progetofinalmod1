@@ -1,3 +1,4 @@
+const inputpesquisa = document.getElementById('txtBusca')
 const mentoria = ()=> {
     window.location = '../mentorias/mentorias.html'
 }
@@ -29,8 +30,15 @@ const redementores = (mentores) => {
         tabela.innerHTML = tabela.innerHTML + mentorhtml
     })
 }
-const getmentores = async () => {
-    const respons = await fetch("http://localhost:3000/mentores")
+const getmentores = async (pesquisa = null) => {
+
+    let texto = ''
+
+     if(pesquisa) {
+        texto =`?q=${pesquisa}`
+     }
+
+    const respons = await fetch(`http://localhost:3000/mentores${texto}`)
     const mentores = await respons.json()
 
     redementores(mentores)
@@ -48,3 +56,14 @@ const deletementor = async (id) => {
 const editarmentores = (id) => {
     window.location = `editarmentores.html?id=${id}`
 }
+
+inputpesquisa.addEventListener('keyup',(e) => {
+    const texto = inputpesquisa.value
+    if(texto === ''){
+        getmentores()
+    }
+   else if(e.key === 'Enter') {
+                        
+        getmentores(texto)
+    }
+})

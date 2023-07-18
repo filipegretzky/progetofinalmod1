@@ -61,7 +61,7 @@ formulario.addEventListener('submit', async (e) => {
  const carregardadosdoformulario = async (alunos) => {
     document.getElementById('nome').value = alunos.nome
     document.getElementById('email').value = alunos.email
-    document.getElementById('select').value = alunos.turma.turma
+    document.getElementById('select').value = alunos.turma.id
 
  }
   const editaraluno = async (alunos) => {

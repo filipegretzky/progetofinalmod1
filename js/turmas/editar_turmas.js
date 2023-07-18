@@ -106,8 +106,8 @@ const mentoria = formulario.elements['mentoria'].value
   })
 
   const carregardadosdoformulario = async (turmas) => {
-    document.getElementById('select').value = turmas.mentorial
-    document.getElementById('mentor').value = turmas.mentor
+    document.getElementById('select').value = turmas.mentorial.id
+    document.getElementById('mentor').value = turmas.mentor.id
     document.getElementById('data_inicio').value = turmas.data_inicio
     document.getElementById('dia').value = turmas.dia
     document.getElementById('hora_inicio').value = turmas.hora_inicio

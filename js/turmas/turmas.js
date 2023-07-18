@@ -1,3 +1,5 @@
+const inputpesquisa = document.getElementById('txtBusca')
+
 const mentoria = ()=> {
     window.location = '../mentorias/mentorias.html'
 }
@@ -34,8 +36,14 @@ const redeturmas = (turmas) => {
     tabela.innerHTML = tabela.innerHTML + turmashtml
  })
 }
-const getturmas = async () => {
-    const respons = await fetch(`http://localhost:3000/turmas`)
+const getturmas = async (pesquisa = null) => {
+     let texto = ''
+
+     if(pesquisa) {
+        texto =`?q=${pesquisa}`
+     }
+
+    const respons = await fetch(`http://localhost:3000/turmas${texto}`)
     const turmas = await respons.json()
 
     redeturmas(turmas)
@@ -53,3 +61,15 @@ const deleteturma = async (id) => {
     })
     window.location = 'turmas.html'
 }
+
+inputpesquisa.addEventListener('keyup',(e) => {
+    const texto = inputpesquisa.value 
+    if(texto === ''){
+        getturmas()
+    } 
+    
+     else if(e.key === 'Enter') {
+                      
+        getturmas(texto)
+    }
+})

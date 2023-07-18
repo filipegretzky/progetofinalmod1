@@ -138,10 +138,13 @@ h3{
         margin-right: 14px;
         margin-top: 4px;
     }
+   /* tr:nth-child(odd){
+        background: rgba(244, 240, 240, 0.648)
+      }*/
     .conteudo-descriçao {
         display: flex;
         width:1110px;
-        height: 44px;
+        height: 48px;
         background-color: rgba(72, 45, 131, 1);
         margin-left: 4px;
         border-radius: 7px;
@@ -154,6 +157,7 @@ h3{
     thead {
         color: white;
         height: 45px;
+        
     }
     .nome {
         width: 556px;
@@ -185,3 +189,14 @@ h3{
         background-color: green;
         width: 196px;
       }
+      tbody{
+        background: rgb(241, 237, 237);
+      }   
+      tr:nth-child(odd){
+        background: rgb(255, 254, 254)
+      }
+      
+    .tt {
+        background-color:rgba(72, 45, 131, 1) ;
+    }
+     

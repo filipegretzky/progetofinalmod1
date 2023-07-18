@@ -42,7 +42,7 @@ const buscarmentor = async (id) => {
     const turma = formulario.elements['nome'].value 
     const mentor = formulario.elements['mentor'].value 
   //checkbox.addEventListener('change', function() {
-    var resultado = checkbox.checked ? 'válido' : 'inválido';
+    var resultado = checkbox.checked ? 'ativo' : 'inativo';
     
     // Objeto com os dados a serem enviados para a API
     var dados = {
@@ -67,6 +67,8 @@ const buscarmentor = async (id) => {
 
   const carregardadosdoformulario = async (mentorias) => {
      document.getElementById('nome').value = mentorias.turma
+     document.getElementById('mentor').value = mentorias.mentor.id
+     document.getElementById('checkbox').value = mentorias.resultado
 
   }
 
@@ -91,17 +93,17 @@ const buscarmentor = async (id) => {
   carregardados()
 
   var checkbox = document.getElementById('checkbox');
-    var labelValido = document.getElementById('label-valido');
-    var labelInvalido = document.getElementById('label-invalido');
+    var labelativo = document.getElementById('label-ativo');
+    var labelInativo = document.getElementById('label-inativo');
     
     checkbox.addEventListener('change',async function() {
       if (checkbox.checked) {
-        labelValido.style.display = 'inline-block';
-        labelInvalido.style.display = 'none';
+        labelativo.style.display = 'inline-block';
+        labelInativo.style.display = 'none';
          
       } else {
-        labelValido.style.display = 'none';
-        labelInvalido.style.display = 'inline-block';
+        labelativo.style.display = 'none';
+        labelInativo.style.display = 'inline-block';
         
       }
     });

@@ -27,7 +27,7 @@ formulario.addEventListener('submit', async (e) => {
     e.preventDefault()
 
    
-      var resultado = checkbox.checked ? 'válido' : 'inválido';
+      var resultado = checkbox.checked ? 'ativo' : 'inativo';
     
       
       var dados = {
@@ -66,17 +66,17 @@ const cadastrarmentoria = async (mentorias) => {
     window.location= 'mentorias.html'
 }   
 var checkbox = document.getElementById('checkbox');
-    var labelValido = document.getElementById('label-valido');
-    var labelInvalido = document.getElementById('label-invalido');
+    var labelativo = document.getElementById('label-ativo');
+    var labelInativo = document.getElementById('label-inativo');
     
     checkbox.addEventListener('change',async function() {
       if (checkbox.checked) {
-        labelValido.style.display = 'inline-block';
-        labelInvalido.style.display = 'none';
+        labelativo.style.display = 'inline-block';
+        labelInativo.style.display = 'none';
          
       } else {
-        labelValido.style.display = 'none';
-        labelInvalido.style.display = 'inline-block';
+        labelativo.style.display = 'none';
+        labelInativo.style.display = 'inline-block';
         
       }
     });
