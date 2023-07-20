@@ -138,9 +138,7 @@ h3{
         margin-right: 14px;
         margin-top: 4px;
     }
-   /* tr:nth-child(odd){
-        background: rgba(244, 240, 240, 0.648)
-      }*/
+ 
     .conteudo-descriçao {
         display: flex;
         width:1110px;
@@ -165,9 +163,7 @@ h3{
     .mentor {
         width: 230px;
     }
-    /*.status {
-        width: 196px;
-    }*/
+   
     #deletbut {
         color: red;
         border: none;
