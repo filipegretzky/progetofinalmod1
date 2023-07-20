@@ -3,5 +3,5 @@ const formulario = document.getElementById('formulario')
 formulario.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    window.location = 'mentores/monitores.html'
+    window.location = 'html/mentores/monitores.html'
 })
