@@ -1,10 +1,10 @@
 const buscarmentor = async (id) => {
-    const response = await fetch(`http://localhost:3000/mentores/${id}`)
+    const response = await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
   }
   const buscarmentores = async () => {
-      const response = await fetch(`http://localhost:3000/mentores`)
+      const response = await fetch(`https://progetofinalmod1.onrender.com/mentores`)
     const mentores = await response.json()
     return mentores
   }
@@ -26,13 +26,13 @@ const buscarmentor = async (id) => {
   carregarselect()
 
   const buscarmentoria = async (id) => {
-    const respost = await fetch(`http://localhost:3000/mentorias/${id}`)
+    const respost = await fetch(`https://progetofinalmod1.onrender.com/mentorias/${id}`)
     const mentoria = respost.json()
     return mentoria
   }
     
   const buscarmentorias = async () => {
-    const response = await fetch(`http://localhost:3000/mentorias`)
+    const response = await fetch(`https://progetofinalmod1.onrender.com/mentorias`)
     const mentorias = response.json()
     return mentorias
   }
@@ -92,7 +92,7 @@ const buscarmentor = async (id) => {
   })
 
   const cadastraturma = async (turmas) => {
-    await fetch (`http://localhost:3000/turmas` ,{
+    await fetch (`https://progetofinalmod1.onrender.com/turmas` ,{
       method: 'POST',
       headers: {
         "Accept": 'application/json, text/plain, */*',

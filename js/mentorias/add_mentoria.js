@@ -1,10 +1,10 @@
 const buscarmentor = async (id) => {
-  const response = await fetch(`http://localhost:3000/mentores/${id}`)
+  const response = await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`)
   const mentor = await response.json()
   return mentor
 }
 const buscarmentores = async () => {
-    const response = await fetch(`http://localhost:3000/mentores`)
+    const response = await fetch(`https://progetofinalmod1.onrender.com/mentores`)
   const mentores = await response.json()
   return mentores
 }
@@ -55,7 +55,7 @@ formulario.addEventListener('submit', async (e) => {
 })
 
 const cadastrarmentoria = async (mentorias) => {
-    await fetch(`http://localhost:3000/mentorias`,{
+    await fetch(`https://progetofinalmod1.onrender.com/mentorias`,{
         method: 'POST',
         headers: {
           "Accept": 'application/json, text/plain, */*',

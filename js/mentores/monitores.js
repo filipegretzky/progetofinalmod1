@@ -38,7 +38,7 @@ const getmentores = async (pesquisa = null) => {
         texto =`?q=${pesquisa}`
      }
 
-    const respons = await fetch(`http://localhost:3000/mentores${texto}`)
+    const respons = await fetch(`https://progetofinalmod1.onrender.com/mentores${texto}`)
     const mentores = await respons.json()
 
     redementores(mentores)
@@ -48,7 +48,7 @@ const novomentor =() => {
     window.location = 'addmentores.html'
 }
 const deletementor = async (id) => {
-    await fetch(`http://localhost:3000/mentores/${id}`,{
+    await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`,{
         method:'DELETE'
     })
     window.location = 'monitores.html'

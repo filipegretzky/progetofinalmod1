@@ -43,7 +43,7 @@ const getturmas = async (pesquisa = null) => {
         texto =`?q=${pesquisa}`
      }
 
-    const respons = await fetch(`http://localhost:3000/turmas${texto}`)
+    const respons = await fetch(`https://progetofinalmod1.onrender.com/turmas${texto}`)
     const turmas = await respons.json()
 
     redeturmas(turmas)
@@ -56,7 +56,7 @@ const novaturma = () => {
     window.location = 'add_turma.html'
 }
 const deleteturma = async (id) => {
-    await fetch(`http://localhost:3000/turmas/${id}`, {
+    await fetch(`https://progetofinalmod1.onrender.com/turmas/${id}`, {
         method:'DELETE'
     })
     window.location = 'turmas.html'

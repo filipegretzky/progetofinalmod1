@@ -16,7 +16,7 @@ formulario.addEventListener('submit', (e) => {
 })
 
 const cadastramentor = async (mentores) => {
-    await fetch(`http://localhost:3000/mentores`,{
+    await fetch(`https://progetofinalmod1.onrender.com/mentores`,{
         method: 'POST',
         headers: {
           "Accept": 'application/json, text/plain, */*',

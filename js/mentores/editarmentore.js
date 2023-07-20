@@ -9,7 +9,7 @@ const getidurl = () => {
     mentorid = pararms.get('id')
 }
   const buscamentor = async () => {
-    const response = await fetch (`http://localhost:3000/mentores/${mentorid}`)
+    const response = await fetch (`https://progetofinalmod1.onrender.com/mentores/${mentorid}`)
     const mentor = await response.json()
     return mentor
 }
@@ -30,7 +30,7 @@ const carregardadosdoformulario = async (mentor) => {
     document.getElementById('email').value = mentor.email
 }
  const editarmentor = async (mentor) => {
-    await fetch (`http://localhost:3000/mentores/${mentorid}`, {
+    await fetch (`https://progetofinalmod1.onrender.com/mentores/${mentorid}`, {
         method: 'PUT',
         headers: {
           "Accept": 'application/json, text/plain, */*',

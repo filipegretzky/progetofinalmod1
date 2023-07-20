@@ -1,10 +1,10 @@
 const buscarmentor = async (id) => {
-    const response = await fetch(`http://localhost:3000/mentores/${id}`)
+    const response = await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
   }
   const buscarmentores = async () => {
-      const response = await fetch(`http://localhost:3000/mentores`)
+      const response = await fetch(`https://progetofinalmod1.onrender.com/mentores`)
     const mentores = await response.json()
     return mentores
   }
@@ -33,7 +33,7 @@ const buscarmentor = async (id) => {
     metoriasid = pararms.get('id')
   }
   const buscarmentoria = async () => {
-    const response = await fetch(`http://localhost:3000/mentorias/${metoriasid}`)
+    const response = await fetch(`https://progetofinalmod1.onrender.com/mentorias/${metoriasid}`)
     const mentoria = await response.json()
     return mentoria
   }
@@ -73,7 +73,7 @@ const buscarmentor = async (id) => {
   }
 
   const editarmentorias = async (mentorias) => {
-    await fetch (`http://localhost:3000/mentorias/${metoriasid}`, {
+    await fetch (`https://progetofinalmod1.onrender.com/mentorias/${metoriasid}`, {
         method: 'PUT',
         headers: {
           "Accept": 'application/json, text/plain, */*',

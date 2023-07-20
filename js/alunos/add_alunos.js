@@ -1,12 +1,12 @@
 const buscarturma = async (id) => {
-    const response = await fetch(`http://localhost:3000/turmas/${id}`)
+    const response = await fetch(`https://progetofinalmod1.onrender.com/turmas/${id}`)
     const turma = await response.json()
     return turma
     
 }
 
 const buscarturmas = async () => {
-    const response = await fetch(`http://localhost:3000/turmas`)
+    const response = await fetch(`https://progetofinalmod1.onrender.com/turmas`)
     const turmas = await response.json()
     return turmas
 }
@@ -46,7 +46,7 @@ formulario.addEventListener('submit', async (e) => {
 })
 
 const cadastraalunos = async (alunos) => {
-    await fetch(`http://localhost:3000/alunos`,{
+    await fetch(`https://progetofinalmod1.onrender.com/alunos`,{
         method: 'POST',
         headers: {
           "Accept": 'application/json, text/plain, */*',

@@ -48,14 +48,14 @@ const getmentorias = async (pesquisa = null) => {
     }
    
 
-    const respons = await fetch(`http://localhost:3000/mentorias${texto} `)
+    const respons = await fetch(`https://progetofinalmod1.onrender.com/mentorias${texto} `)
     const mentoria = await respons.json()
 
     redementorias(mentoria)
      }
 
 const deletementotia = async (id) => {
-    await fetch(`http://localhost:3000/mentorias/${id}`,{
+    await fetch(`https://progetofinalmod1.onrender.com/mentorias/${id}`,{
         method:'DELETE'
     })
     window.location = 'mentorias.html'

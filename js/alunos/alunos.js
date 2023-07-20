@@ -41,14 +41,14 @@ const getalunos = async (pesquisa = null) => {
        texto =`?q=${pesquisa}`
     }
 
-   const  respons = await fetch(`http://localhost:3000/alunos${texto}`)
+   const  respons = await fetch(`https://progetofinalmod1.onrender.com/alunos${texto}`)
    const alunos = await respons.json()
 
    redalunos(alunos)
 }
 getalunos()
 const deletealuno = async (id) => {
-    await fetch(`http://localhost:3000/alunos/${id}`,{
+    await fetch(`https://progetofinalmod1.onrender.com/alunos/${id}`,{
         method:'DELETE'
     })
     window.location = 'alunos.html'
