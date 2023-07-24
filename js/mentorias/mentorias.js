@@ -18,14 +18,24 @@ const redementorias = (mentoria) => {
     const tabela = document.querySelector('tbody')
      tabela.innerHTML = '' 
      
-
     mentoria.forEach(mentorias => {
+       var resultado = mentorias.resultado
+       var apresultado = ''
+       if(resultado == 'ativo'){
+       resultado =  apresultado+ `<div class="ativo">${resultado}</div>`
+
+       }
+       else {
+        resultado =apresultado = `<div class="inativo">${resultado}</div>`
+       }
+       
+       
         const mentoriahtml =  `
         <tr>
         <td class="nome">${mentorias.turma}</td>
         <td class="mentor">${mentorias.mentor.nome}</td>
 
-        <td class="status">${mentorias.resultado}</td>
+        <td class="status status2">${resultado}</td>
         
         <td class="açao">
         <button onclick="editarmentorias(${mentorias.id})" id="editarbut">🖊</button>
@@ -37,6 +47,7 @@ const redementorias = (mentoria) => {
         tabela.innerHTML = tabela.innerHTML + mentoriahtml
 
         
+   
     })
   
 }
@@ -52,6 +63,7 @@ const getmentorias = async (pesquisa = null) => {
     const mentoria = await respons.json()
 
     redementorias(mentoria)
+    
      }
 
 const deletementotia = async (id) => {

@@ -7,7 +7,7 @@ body {
 .menu {
     position: relative;
     width: 226px;
-    height: 700px; 
+    height: vh; 
     background-color: rgba(72, 45, 131, 1);
 }
 .conteudo {
@@ -195,4 +195,19 @@ h3{
     .tt {
         background-color:rgba(72, 45, 131, 1) ;
     }
-     
+     .ativo{
+      color: green;
+      background: rgba(105, 205, 105, 0.68);
+      padding-left: 8px;
+      width: 73px;
+      border-radius: 42px;
+      border: 1px solid green;
+     }
+     .inativo{
+      color: red;
+      background: #ff9f9f;
+      padding-left: 8px;
+      width: 73px;
+      border-radius: 42px;
+      border: 1px solid red;
+     }
