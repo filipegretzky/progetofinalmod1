@@ -97,7 +97,7 @@ h3{
         margin-bottom: 7px;
     }
     .idbusca {
-        width:1119px;
+        width:100%;
        
         height: 57px;
         display: flex;
@@ -136,7 +136,7 @@ h3{
         color: white;
         border-radius: 13px;
         border: none;
-        margin-right: 14px;
+      
         margin-top: 4px;
     }
  
