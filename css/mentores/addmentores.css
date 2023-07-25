@@ -42,10 +42,12 @@ body {
 
 }
 h2 {
-    font-family: 'Satoshi', sans-serif;
-    font-size: 33px;
-    color: #fbb04d;  
-    margin-left: 11px;                                       
+  font-family: 'Satoshi', sans-serif;
+  font-size: 33px;
+  color: #fbb04d;  
+  margin-left: 11px;   
+  margin-top: 18px;
+  margin-bottom: 24px;                                    
 }
 strong {
     color: white;
@@ -155,3 +157,6 @@ box-shadow: 2px -2px 6px 0px rgba(115,100,115,1);
   .container {
     margin-left: 0px;
   }
+  #butp {
+    background: #8d6eab;
+  }    

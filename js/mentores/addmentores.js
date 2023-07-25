@@ -26,4 +26,15 @@ const cadastramentor = async (mentores) => {
     })
     window.location= 'monitores.html'
 }
-
+const mentoria = () => {
+    window.location = '../mentorias/mentorias.html' 
+}
+const mentores = () => {
+    window.location = 'monitores.html' 
+}
+const turmas = () => {
+    window.location = '../turmas/turmas.html'
+}
+const alunos = () => {
+    window.location = '../alunos/alunos.html'
+}
