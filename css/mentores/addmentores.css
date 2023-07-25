@@ -152,3 +152,6 @@ box-shadow: 2px -2px 6px 0px rgba(115,100,115,1);
      height: 900px;
     }
   }
+  .conteiner {
+    margin-left: 0px;
+  }
