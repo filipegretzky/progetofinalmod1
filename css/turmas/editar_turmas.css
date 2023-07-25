@@ -156,3 +156,13 @@ input {
     height: 40px;
     border-radius: 16px;
   }
+  @media (min-height: 757px) {
+    .menu {
+     height: 800px;
+    }
+  }
+  @media (min-height: 900px) {
+    .menu {
+     height: 900px;
+    }
+  }

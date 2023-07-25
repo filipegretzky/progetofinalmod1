@@ -214,3 +214,13 @@ box-shadow: 2px -2px 6px 0px rgba(115,100,115,1);
   .label-inativo {
     color: red;
   }
+  @media (min-height: 757px) {
+    .menu {
+     height: 800px;
+    }
+  }
+  @media (min-height: 900px) {
+    .menu {
+     height: 900px;
+    }
+  }
