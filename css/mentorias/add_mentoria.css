@@ -11,12 +11,12 @@ body {
     background-color: rgba(72, 45, 131, 1);
 }
 .conteudo {
-    width: 1119px;
+    width: 100%;
     height: 700px;
    
 }
 .topo{
-    width:1119px;
+    width:100%;
    
     height: 87px;
     display: flex;
@@ -25,7 +25,7 @@ body {
 
 }
 .dados-gerais {
-    width: 1119px;
+    width: 100%;
     height: 533px;
 }
 .item-menu {
@@ -43,10 +43,12 @@ body {
 
 }
 h2 {
-    font-family: 'Satoshi', sans-serif;
-    font-size: 33px;
-    color: #fbb04d;  
-    margin-left: 11px;                                       
+  font-family: 'Satoshi', sans-serif;
+  font-size: 33px;
+  color: #fbb04d;  
+  margin-left: 11px;   
+  margin-top: 18px;
+  margin-bottom: 24px;                                       
 }
 strong {
     color: white;
@@ -103,7 +105,7 @@ strong {
     border: 1px solid #e3d0d0;
 }
   .conteudo-adicionar {
-    width: 1102px;
+    width: 100%;
     height: 309px;
    
     margin-left: 10px;
@@ -224,4 +226,10 @@ box-shadow: 2px -2px 6px 0px rgba(115,100,115,1);
      height: 900px;
     }
   }
+  .container {
+    margin-left: 0px;
+  }
+  #butp {
+    background: #8d6eab;
+  }    
   

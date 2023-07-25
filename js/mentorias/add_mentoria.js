@@ -83,4 +83,19 @@ var checkbox = document.getElementById('checkbox');
     const voltar = () => {
       window.location = 'mentorias.html'
   }
+  const nova_mentoria = () => {
+    window.location = 'add_mentoria.html'
+}
+const mentoria = ()=> {
+    window.location = 'mentorias.html'
+}
+const turmas = ()=> {
+    window.location = '../turmas/turmas.html'
+}
+const alunos = () => {
+    window.location = '../alunos/alunos.html'
+}
+const mentores = () => {
+    window.location = '../mentores/monitores.html'
+}
     
