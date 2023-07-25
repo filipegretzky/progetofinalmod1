@@ -220,3 +220,8 @@ h3{
          height: 800px;
         }
       }
+      @media (min-height: 900px) {
+        .menu {
+         height: 900px;
+        }
+      }
