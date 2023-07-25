@@ -105,3 +105,15 @@ const buscarmentor = async (id) => {
   const voltar = () => {
     window.location = 'turmas.html'
 }
+const mentoria = ()=> {
+  window.location = '../mentorias/mentorias.html'
+}
+const turmas = ()=> {
+  window.location = 'turmas.html'
+}
+const alunos = () => {
+  window.location = '../alunos/alunos.html'
+}
+const mentores = () => {
+  window.location = '../mentores/monitores.html'
+}

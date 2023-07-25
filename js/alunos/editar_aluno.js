@@ -87,3 +87,15 @@ formulario.addEventListener('submit', async (e) => {
   const voltar = () => {
     window.location = 'alunos.html'
 }
+const mentoria = ()=> {
+    window.location = '../mentorias/mentorias.html'
+}
+const turmas = ()=> {
+    window.location = '../turmas/turmas.html'
+}
+const alunos = () => {
+    window.location = 'alunos.html'
+}
+const mentores = () => {
+    window.location = '../mentores/monitores.html'
+}
