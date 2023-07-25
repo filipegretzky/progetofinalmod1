@@ -50,3 +50,15 @@ const carregardadosdoformulario = async (mentor) => {
  const voltar = () => {
     window.location = 'monitores.html'
 }
+const mentoria = ()=> {
+    window.location = '../mentorias/mentorias.html'
+}
+const turmas = ()=> {
+    window.location = '../turmas/turmas.html'
+}
+const alunos = () => {
+    window.location = '../alunos/alunos.html'
+}
+const mentores = () => {
+    window.location = 'monitores.html'
+}
