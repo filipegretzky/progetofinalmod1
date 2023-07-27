@@ -1,13 +1,16 @@
+// busca o mentor pelo id 
 const buscarmentor = async (id) => {
   const response = await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`)
   const mentor = await response.json()
   return mentor
 }
+//busca todos os mentores
 const buscarmentores = async () => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/mentores`)
   const mentores = await response.json()
   return mentores
 }
+//carrega o select
 const carregarselect = async () => {
     const mentores = await buscarmentores()
     const mentorselect = document.getElementById('mentor')
@@ -23,10 +26,12 @@ const carregarselect = async () => {
 }
 carregarselect()
 const formulario = document.getElementById('formulario')
+
+// evento que adiciona a api
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-   
+     //onde onde vejo o resultado que vem do chek box
       var resultado = checkbox.checked ? 'ativo' : 'inativo';
     
       
@@ -54,6 +59,7 @@ formulario.addEventListener('submit', async (e) => {
     cadastrarmentoria(mentorias)
 })
 
+// onde adicionar o conteudo a api 
 const cadastrarmentoria = async (mentorias) => {
     await fetch(`https://progetofinalmod1.onrender.com/mentorias`,{
         method: 'POST',
@@ -65,6 +71,8 @@ const cadastrarmentoria = async (mentorias) => {
     })
     window.location= 'mentorias.html'
 }   
+
+//verificaçoes do chakbox 
 var checkbox = document.getElementById('checkbox');
     var labelativo = document.getElementById('label-ativo');
     var labelInativo = document.getElementById('label-inativo');
@@ -80,9 +88,13 @@ var checkbox = document.getElementById('checkbox');
         
       }
     });
+
+    //funçao do butao voltar 
     const voltar = () => {
       window.location = 'mentorias.html'
   }
+
+  //funçoes do menu 
   const nova_mentoria = () => {
     window.location = 'add_mentoria.html'
 }

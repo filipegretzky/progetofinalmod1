@@ -1,7 +1,12 @@
+//funçao do botao de voltar
 const voltar = () => {
     window.location = 'monitores.html'
 }
+
+
 const formulario = document.getElementById('formulario')
+
+//evento que manda o formulario para ser salvo na api
 formulario.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -15,6 +20,8 @@ formulario.addEventListener('submit', (e) => {
     cadastramentor(mentores)
 })
 
+
+// funçao que adiciona e salva o conteudo do evento na api
 const cadastramentor = async (mentores) => {
     await fetch(`https://progetofinalmod1.onrender.com/mentores`,{
         method: 'POST',
@@ -26,6 +33,8 @@ const cadastramentor = async (mentores) => {
     })
     window.location= 'monitores.html'
 }
+
+//funçoes do menu 
 const mentoria = () => {
     window.location = '../mentorias/mentorias.html' 
 }

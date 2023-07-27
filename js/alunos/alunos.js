@@ -1,7 +1,10 @@
 const inputpesquisa = document.getElementById('txtBusca')
+// funçao que chama a paquina de adicionar
 const novoaluno = () => {
     window.location = 'add_aluno.html'
 }
+
+//funçao do menu
 const mentoria = ()=> {
     window.location = '../mentorias/mentorias.html'
 }
@@ -15,6 +18,7 @@ const mentores = () => {
     window.location = '../mentores/monitores.html'
 }
 
+//adiciona o conteudo na minha tabela
 const redalunos = (alunos) => {
     const tabela = document.querySelector('tbody')
     tabela.innerHTML = ''
@@ -34,6 +38,7 @@ const redalunos = (alunos) => {
         tabela.innerHTML = tabela.innerHTML + alunoshtml
     });
 }
+//recupera o conteudo para adicionar na tebela
 const getalunos = async (pesquisa = null) => {
     let texto = ''
 
@@ -47,15 +52,20 @@ const getalunos = async (pesquisa = null) => {
    redalunos(alunos)
 }
 getalunos()
+
+//deleta o conteudo
 const deletealuno = async (id) => {
     await fetch(`https://progetofinalmod1.onrender.com/alunos/${id}`,{
         method:'DELETE'
     })
     window.location = 'alunos.html'
 }
+//chama a paguina para editar com o id na url
 const editaraluno = (id) => {
     window.location = `editar_aluno.html?id=${id}`
 }
+
+//evento do pesquisar
 inputpesquisa.addEventListener('keyup',(e) => {
     const texto = inputpesquisa.value 
 

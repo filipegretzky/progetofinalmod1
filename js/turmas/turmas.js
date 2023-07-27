@@ -1,5 +1,5 @@
 const inputpesquisa = document.getElementById('txtBusca')
-
+// funçoes do menu
 const mentoria = ()=> {
     window.location = '../mentorias/mentorias.html'
 }
@@ -12,7 +12,7 @@ const alunos = () => {
 const mentores = () => {
     window.location = '../mentores/monitores.html'
 }
-
+//adiciona o conteudo na minha tabela
 const redeturmas = (turmas) => {
  const tabela = document.querySelector('tbody')
  tabela.innerHTML = ''
@@ -36,6 +36,8 @@ const redeturmas = (turmas) => {
     tabela.innerHTML = tabela.innerHTML + turmashtml
  })
 }
+
+//busca o conteudo da api
 const getturmas = async (pesquisa = null) => {
      let texto = ''
 
@@ -49,9 +51,13 @@ const getturmas = async (pesquisa = null) => {
     redeturmas(turmas)
 }
 getturmas()
+
+//chama a paguina de editar com id na url
 const editarturmas= async (id) => {
     window.location = `editar_turmas.html?id=${id}`
 }
+
+//chama a paguina de adicionar
 const novaturma = () => {
     window.location = 'add_turma.html'
 }
@@ -62,6 +68,7 @@ const deleteturma = async (id) => {
     window.location = 'turmas.html'
 }
 
+//evento da pesquisa 
 inputpesquisa.addEventListener('keyup',(e) => {
     const texto = inputpesquisa.value 
     if(texto === ''){

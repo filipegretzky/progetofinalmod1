@@ -1,13 +1,17 @@
+//busca o mentor 
 const buscarmentor = async (id) => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
   }
+  //busca todos os mentores 
   const buscarmentores = async () => {
       const response = await fetch(`https://progetofinalmod1.onrender.com/mentores`)
     const mentores = await response.json()
     return mentores
   }
+
+  //carrega no select
   const carregarselect = async () => {
       const mentores = await buscarmentores()
       const mentorselect = document.getElementById('mentor')
@@ -24,19 +28,24 @@ const buscarmentor = async (id) => {
   carregarselect()
   const formulario = document.getElementById('formulario')
 
-  metoriasid = null
+   let metoriasid = null
    
+   //salva o id da url 
   const getidurl = () => {
     const paramString = window.location.search
     const pararms = new URLSearchParams(paramString)
    
     metoriasid = pararms.get('id')
   }
+
+  //busca os dados do id da url 
   const buscarmentoria = async () => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/mentorias/${metoriasid}`)
     const mentoria = await response.json()
     return mentoria
   }
+
+  // evento que pega os dados do formulario
   formulario.addEventListener('submit', async (e)=> {
     e.preventDefault()
     const turma = formulario.elements['nome'].value 
@@ -65,13 +74,14 @@ const buscarmentor = async (id) => {
     editarmentorias(mentorias)
   })
 
+   // carrega os dados no formulario
   const carregardadosdoformulario = async (mentorias) => {
      document.getElementById('nome').value = mentorias.turma
      document.getElementById('mentor').value = mentorias.mentor.id
      document.getElementById('checkbox').value = mentorias.resultado
 
   }
-
+  // editar o conteudo da api
   const editarmentorias = async (mentorias) => {
     await fetch (`https://progetofinalmod1.onrender.com/mentorias/${metoriasid}`, {
         method: 'PUT',
@@ -83,6 +93,8 @@ const buscarmentor = async (id) => {
     })
     window.location='mentorias.html'
   }
+
+  //chama todas as funçoes
   const carregardados = async () => {
     getidurl()
 
@@ -92,6 +104,7 @@ const buscarmentor = async (id) => {
   }
   carregardados()
 
+  //verificasao dos checkbox
   var checkbox = document.getElementById('checkbox');
     var labelativo = document.getElementById('label-ativo');
     var labelInativo = document.getElementById('label-inativo');
@@ -107,9 +120,12 @@ const buscarmentor = async (id) => {
         
       }
     });
+    //butao de voltar
     const voltar = () => {
       window.location = 'mentorias.html'
   }
+
+  // funçoes do menu
   const nova_mentoria = () => {
     window.location = 'add_mentoria.html'
 }

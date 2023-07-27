@@ -1,13 +1,16 @@
+// busca o mentor
 const buscarmentor = async (id) => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
   }
+  //busca todos os mentores
   const buscarmentores = async () => {
       const response = await fetch(`https://progetofinalmod1.onrender.com/mentores`)
     const mentores = await response.json()
     return mentores
   }
+  //carrega no select os mentores
   const carregarselect = async () => {
       const mentores = await buscarmentores()
       const mentorselect = document.getElementById('mentor')
@@ -25,17 +28,19 @@ const buscarmentor = async (id) => {
   }
   carregarselect()
 
+  //busca as mentorias
   const buscarmentoria = async (id) => {
     const respost = await fetch(`https://progetofinalmod1.onrender.com/mentorias/${id}`)
     const mentoria = respost.json()
     return mentoria
   }
-    
+    //busca todas as mentorias
   const buscarmentorias = async () => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/mentorias`)
     const mentorias = response.json()
     return mentorias
   }
+  //carrega no select
   const carregarselectmentoria = async () => {
     const mentorias = await buscarmentorias()
     const mentoriasselect = document.getElementById('select')
@@ -51,7 +56,7 @@ const buscarmentor = async (id) => {
   carregarselectmentoria()
  
   const formulario = document.getElementById('formulario')
-
+// evento que pega o conteudo pra ser adicionado
   formulario.addEventListener('submit',  async (e)=> {
     e.preventDefault()
      
@@ -90,7 +95,7 @@ const buscarmentor = async (id) => {
    }
   cadastraturma(turmas)
   })
-
+ //onde adiciona na api
   const cadastraturma = async (turmas) => {
     await fetch (`https://progetofinalmod1.onrender.com/turmas` ,{
       method: 'POST',
@@ -102,9 +107,12 @@ const buscarmentor = async (id) => {
     })
     window.location= 'turmas.html'
   }
+  // butao de volatr 
   const voltar = () => {
     window.location = 'turmas.html'
 }
+
+//funçoes do menu
 const mentoria = ()=> {
   window.location = '../mentorias/mentorias.html'
 }

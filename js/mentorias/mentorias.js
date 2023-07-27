@@ -1,4 +1,5 @@
 const inputpesquisa = document.getElementById('txtBusca')
+// funçao do menu 
 const nova_mentoria = () => {
     window.location = 'add_mentoria.html'
 }
@@ -14,11 +15,14 @@ const alunos = () => {
 const mentores = () => {
     window.location = '../mentores/monitores.html'
 }
+
+// fumçao que mostra o comteudo na minha tabela
 const redementorias = (mentoria) => {
     const tabela = document.querySelector('tbody')
      tabela.innerHTML = '' 
-     
+     // adiciona a tabela
     mentoria.forEach(mentorias => {
+        //adiciona o classe ao status 
        var resultado = mentorias.resultado
        var apresultado = ''
        if(resultado == 'ativo'){
@@ -51,7 +55,10 @@ const redementorias = (mentoria) => {
     })
   
 }
+
+// funçao que busca o conteudo da api
 const getmentorias = async (pesquisa = null) => {
+    //faz a pesquisa 
     let texto = ''
 
     if(pesquisa) {
@@ -65,7 +72,8 @@ const getmentorias = async (pesquisa = null) => {
     redementorias(mentoria)
     
      }
-
+     
+  // funçao do delete
 const deletementotia = async (id) => {
     await fetch(`https://progetofinalmod1.onrender.com/mentorias/${id}`,{
         method:'DELETE'
@@ -73,10 +81,12 @@ const deletementotia = async (id) => {
     window.location = 'mentorias.html'
 }
 getmentorias()
-
+//passa para a paguina de ediçao com id 
 const editarmentorias = async (id) => {
     window.location = `editar_mentorias.html?id=${id}`
 }
+
+// evento da pesquisa 
 
 inputpesquisa.addEventListener('keyup',(e) => {
     const texto = inputpesquisa.value

@@ -1,16 +1,17 @@
+//busca a turma 
 const buscarturma = async (id) => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/turmas/${id}`)
     const turma = await response.json()
     return turma
     
 }
-
+//busca todas as turmas
 const buscarturmas = async () => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/turmas`)
     const turmas = await response.json()
     return turmas
 }
-
+// carrega no select
 const carregarselect = async () => {
     const turmas = await buscarturmas()
     const turmasselect = document.getElementById('select')
@@ -24,7 +25,7 @@ const carregarselect = async () => {
 }
 carregarselect()
 const formulario = document.getElementById('formulario')
-
+//evento que salva o conteudo para ser adicionado 
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -44,7 +45,7 @@ formulario.addEventListener('submit', async (e) => {
     }
   cadastraalunos(alunos)
 })
-
+//onde adiciona
 const cadastraalunos = async (alunos) => {
     await fetch(`https://progetofinalmod1.onrender.com/alunos`,{
         method: 'POST',
@@ -57,9 +58,11 @@ const cadastraalunos = async (alunos) => {
     })
     window.location= 'alunos.html'
 }
+//butao de voltar
 const voltar = () => {
     window.location = 'alunos.html'
 }
+//funçao do menu
 const mentoria = ()=> {
     window.location = '../mentorias/mentorias.html'
 }

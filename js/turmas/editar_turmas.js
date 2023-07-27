@@ -1,13 +1,16 @@
+// busca o mentor
 const buscarmentor = async (id) => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/mentores/${id}`)
     const mentor = await response.json()
     return mentor
   }
+  // busco dodos os mentores
   const buscarmentores = async () => {
       const response = await fetch(`https://progetofinalmod1.onrender.com/mentores`)
     const mentores = await response.json()
     return mentores
   }
+  //carrego na select
   const carregarselect = async () => {
       const mentores = await buscarmentores()
       const mentorselect = document.getElementById('mentor')
@@ -24,18 +27,19 @@ const buscarmentor = async (id) => {
       });
   }
   carregarselect()
-
+  // busco a mentoria
   const buscarmentoria = async (id) => {
     const respost = await fetch(`https://progetofinalmod1.onrender.com/mentorias/${id}`)
     const mentoria = respost.json()
     return mentoria
   }
-    
+    //busco todas as mentorias 
   const buscarmentorias = async () => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/mentorias`)
     const mentorias = response.json()
     return mentorias
   }
+  //carrego no select
   const carregarselectmentoria = async () => {
     const mentorias = await buscarmentorias()
     const mentoriasselect = document.getElementById('select')
@@ -52,22 +56,23 @@ const buscarmentor = async (id) => {
 
   const formulario = document.getElementById('formulario')
 
-   turmasid = null
+    let turmasid = null
 
+   // recupero o id da url e pesso pra minha variavel
   const getidurl = () => {
     const paramString = window.location.search
     const pararms = new URLSearchParams(paramString)
    
     turmasid = pararms.get('id')
   }
-
+  // busco o conteudo da api com o id 
   const buscarturma = async () => {
     const response = await fetch(`https://progetofinalmod1.onrender.com/turmas/${turmasid}`)
     const turma = await response.json()
     return turma
   }
 
-  
+  //evento onde vou salvar para manda os dados editados 
   formulario.addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -104,7 +109,8 @@ const mentoria = formulario.elements['mentoria'].value
    }
   editarturmas(turmas)
   })
-
+  
+ //carrega os dados no formulario
   const carregardadosdoformulario = async (turmas) => {
     document.getElementById('select').value = turmas.mentorial.id
     document.getElementById('mentor').value = turmas.mentor.id
@@ -119,6 +125,8 @@ const mentoria = formulario.elements['mentoria'].value
 
  }
 
+
+ //salva a ediçao
  const editarturmas = async (turmas) => {
     await fetch(`https://progetofinalmod1.onrender.com/turmas/${turmasid}`, {
         method: 'PUT',
@@ -130,7 +138,7 @@ const mentoria = formulario.elements['mentoria'].value
     })
     window.location = 'turmas.html'
  }
-
+//chama todas as funçoes
  const carregardados = async () => {
     getidurl()
 
@@ -139,9 +147,13 @@ const mentoria = formulario.elements['mentoria'].value
     carregardadosdoformulario(turmas)
  }
  carregardados()
+
+ //butao de voltar
   const voltar = () => {
     window.location = 'turmas.html'
 }
+
+//funçao do menu
 const mentoria = ()=> {
   window.location = '../mentorias/mentorias.html'
 }
